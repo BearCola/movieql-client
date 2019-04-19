@@ -5,8 +5,8 @@ export const HOME_PAGE = gql`
     movies(limit: 50, rating: 7) {
       id
       title
-      genres
       rating
+      medium_cover_image
     }
   }
 `;
@@ -22,9 +22,10 @@ export const MOVIE_DETAILS = gql`
       genres
     }
     suggestions(id: $movieId) {
-      medium_cover_image
+      id
       title
       rating
+      medium_cover_image
     }
   }
 `;
